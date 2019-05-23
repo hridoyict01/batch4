@@ -30,6 +30,9 @@
         {
             this.showButton = new System.Windows.Forms.Button();
             this.showRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.inputTextBox = new System.Windows.Forms.TextBox();
+            this.reverseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // showButton
@@ -50,17 +53,48 @@
             this.showRichTextBox.TabIndex = 1;
             this.showRichTextBox.Text = "";
             // 
+            // AddButton
+            // 
+            this.AddButton.Location = new System.Drawing.Point(219, 32);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(75, 23);
+            this.AddButton.TabIndex = 2;
+            this.AddButton.Text = "Add";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // inputTextBox
+            // 
+            this.inputTextBox.Location = new System.Drawing.Point(70, 32);
+            this.inputTextBox.Name = "inputTextBox";
+            this.inputTextBox.Size = new System.Drawing.Size(143, 20);
+            this.inputTextBox.TabIndex = 3;
+            // 
+            // reverseButton
+            // 
+            this.reverseButton.Location = new System.Drawing.Point(300, 106);
+            this.reverseButton.Name = "reverseButton";
+            this.reverseButton.Size = new System.Drawing.Size(75, 23);
+            this.reverseButton.TabIndex = 4;
+            this.reverseButton.Text = "Reverse Array";
+            this.reverseButton.UseVisualStyleBackColor = true;
+            this.reverseButton.Click += new System.EventHandler(this.reverseButton_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.reverseButton);
+            this.Controls.Add(this.inputTextBox);
+            this.Controls.Add(this.AddButton);
             this.Controls.Add(this.showRichTextBox);
             this.Controls.Add(this.showButton);
             this.Name = "HomeForm";
             this.Text = "ArrayForm";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -68,6 +102,9 @@
 
         private System.Windows.Forms.Button showButton;
         private System.Windows.Forms.RichTextBox showRichTextBox;
+        private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.TextBox inputTextBox;
+        private System.Windows.Forms.Button reverseButton;
     }
 }
 
