@@ -1,6 +1,6 @@
 ﻿namespace ArrayFormThirdClass
 {
-    partial class Form1
+    partial class HomeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.showButton = new System.Windows.Forms.Button();
+            this.showRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.SuspendLayout();
+            // 
+            // showButton
+            // 
+            this.showButton.Location = new System.Drawing.Point(300, 59);
+            this.showButton.Name = "showButton";
+            this.showButton.Size = new System.Drawing.Size(75, 23);
+            this.showButton.TabIndex = 0;
+            this.showButton.Text = "Show";
+            this.showButton.UseVisualStyleBackColor = true;
+            this.showButton.Click += new System.EventHandler(this.showButton_Click);
+            // 
+            // showRichTextBox
+            // 
+            this.showRichTextBox.Location = new System.Drawing.Point(70, 61);
+            this.showRichTextBox.Name = "showRichTextBox";
+            this.showRichTextBox.Size = new System.Drawing.Size(224, 334);
+            this.showRichTextBox.TabIndex = 1;
+            this.showRichTextBox.Text = "";
+            // 
+            // HomeForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.showRichTextBox);
+            this.Controls.Add(this.showButton);
+            this.Name = "HomeForm";
+            this.Text = "ArrayForm";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button showButton;
+        private System.Windows.Forms.RichTextBox showRichTextBox;
     }
 }
 
