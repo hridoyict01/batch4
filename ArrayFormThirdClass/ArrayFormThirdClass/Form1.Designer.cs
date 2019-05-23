@@ -35,6 +35,8 @@
             this.reverseButton = new System.Windows.Forms.Button();
             this.sumButton = new System.Windows.Forms.Button();
             this.copyButton = new System.Windows.Forms.Button();
+            this.duplicateArray = new System.Windows.Forms.Button();
+            this.uniqueButtton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // showButton
@@ -102,11 +104,33 @@
             this.copyButton.UseVisualStyleBackColor = true;
             this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
             // 
+            // duplicateArray
+            // 
+            this.duplicateArray.Location = new System.Drawing.Point(301, 250);
+            this.duplicateArray.Name = "duplicateArray";
+            this.duplicateArray.Size = new System.Drawing.Size(75, 23);
+            this.duplicateArray.TabIndex = 7;
+            this.duplicateArray.Text = "Duplicate";
+            this.duplicateArray.UseVisualStyleBackColor = true;
+            this.duplicateArray.Click += new System.EventHandler(this.duplicateArray_Click);
+            // 
+            // uniqueButtton
+            // 
+            this.uniqueButtton.Location = new System.Drawing.Point(301, 279);
+            this.uniqueButtton.Name = "uniqueButtton";
+            this.uniqueButtton.Size = new System.Drawing.Size(75, 23);
+            this.uniqueButtton.TabIndex = 8;
+            this.uniqueButtton.Text = "Unique";
+            this.uniqueButtton.UseVisualStyleBackColor = true;
+            this.uniqueButtton.Click += new System.EventHandler(this.uniqueButtton_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.uniqueButtton);
+            this.Controls.Add(this.duplicateArray);
             this.Controls.Add(this.copyButton);
             this.Controls.Add(this.sumButton);
             this.Controls.Add(this.reverseButton);
@@ -131,6 +155,8 @@
         private System.Windows.Forms.Button reverseButton;
         private System.Windows.Forms.Button sumButton;
         private System.Windows.Forms.Button copyButton;
+        private System.Windows.Forms.Button duplicateArray;
+        private System.Windows.Forms.Button uniqueButtton;
     }
 }
 

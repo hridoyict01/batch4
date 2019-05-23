@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -90,6 +91,51 @@ namespace ArrayFormThirdClass
 
             showRichTextBox.Text = message;
 
+        }
+
+        private void duplicateArray_Click(object sender, EventArgs e)
+        {
+            message = "";
+            for (int j= 0; j < this.index; j++)
+            {
+                for (int i = j + 1; i < index; i++)
+                {
+                    if (number[j] == number[i])
+                    {
+                        message += "duplicate: " + number[i] + "\n";
+
+                        break;
+                    }
+                    
+                }
+            }
+            showRichTextBox.Text = message;
+        }
+
+        private void uniqueButtton_Click(object sender, EventArgs e)
+        {
+            message = "";
+            
+            for (int j = 0; j < this.index; j++)
+            {
+                bool found = false;
+                for (int i = j + 1; i < index; i++)
+                {
+                    if (number[j] == number[i])
+                    {
+                        found = true;
+                        break;    
+                    }                 
+
+                }
+
+                if (found == false)
+                {
+                    message += "Unique is " + number[j]+"\n";
+                }
+            }
+            
+            showRichTextBox.Text = message;
         }
     }
 }
