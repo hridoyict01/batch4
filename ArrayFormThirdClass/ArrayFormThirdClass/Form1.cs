@@ -58,5 +58,18 @@ namespace ArrayFormThirdClass
             }
             showRichTextBox.Text = message;
         }
+
+        private void sumButton_Click(object sender, EventArgs e)
+        {
+            int sum = 0;
+            message = "Summation value is : ";
+            for (int index = 0; index < this.index; index++)
+            {
+                sum = sum + number[index];
+            }
+
+            message += " " + sum;
+            showRichTextBox.Text = message;
+        }
     }
 }

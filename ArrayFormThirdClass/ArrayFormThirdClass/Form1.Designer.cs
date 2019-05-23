@@ -33,6 +33,7 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.inputTextBox = new System.Windows.Forms.TextBox();
             this.reverseButton = new System.Windows.Forms.Button();
+            this.sumButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // showButton
@@ -80,11 +81,22 @@
             this.reverseButton.UseVisualStyleBackColor = true;
             this.reverseButton.Click += new System.EventHandler(this.reverseButton_Click);
             // 
+            // sumButton
+            // 
+            this.sumButton.Location = new System.Drawing.Point(301, 158);
+            this.sumButton.Name = "sumButton";
+            this.sumButton.Size = new System.Drawing.Size(75, 23);
+            this.sumButton.TabIndex = 5;
+            this.sumButton.Text = "Sum";
+            this.sumButton.UseVisualStyleBackColor = true;
+            this.sumButton.Click += new System.EventHandler(this.sumButton_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.sumButton);
             this.Controls.Add(this.reverseButton);
             this.Controls.Add(this.inputTextBox);
             this.Controls.Add(this.AddButton);
@@ -105,6 +117,7 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.TextBox inputTextBox;
         private System.Windows.Forms.Button reverseButton;
+        private System.Windows.Forms.Button sumButton;
     }
 }
 
