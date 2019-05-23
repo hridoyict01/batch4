@@ -71,5 +71,25 @@ namespace ArrayFormThirdClass
             message += " " + sum;
             showRichTextBox.Text = message;
         }
+
+        private void copyButton_Click(object sender, EventArgs e)
+        {
+            int [] number2 = new int[size];
+            message = "New copied array: \n";
+            for (int index = 0; index < this.index; index++)
+            {
+                number2[index] = number[index];
+            }
+            for (int index = 0; index < this.index; index++)
+            {
+                if (number[index] != 0)
+                {
+                    message += "value is " + number2[index] + " at index " + index + "\n";
+                }
+            }
+
+            showRichTextBox.Text = message;
+
+        }
     }
 }
