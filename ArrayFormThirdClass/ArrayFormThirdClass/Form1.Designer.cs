@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.showButton = new System.Windows.Forms.Button();
             this.showRichTextBox = new System.Windows.Forms.RichTextBox();
             this.AddButton = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             this.copyButton = new System.Windows.Forms.Button();
             this.duplicateArray = new System.Windows.Forms.Button();
             this.uniqueButtton = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
             // 
             // showButton
@@ -124,6 +126,11 @@
             this.uniqueButtton.UseVisualStyleBackColor = true;
             this.uniqueButtton.Click += new System.EventHandler(this.uniqueButtton_Click);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,7 +147,6 @@
             this.Controls.Add(this.showButton);
             this.Name = "HomeForm";
             this.Text = "ArrayForm";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,6 +163,7 @@
         private System.Windows.Forms.Button copyButton;
         private System.Windows.Forms.Button duplicateArray;
         private System.Windows.Forms.Button uniqueButtton;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 
