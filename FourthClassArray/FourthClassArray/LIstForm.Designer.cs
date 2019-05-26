@@ -32,6 +32,7 @@
             this.inutTextBox = new System.Windows.Forms.TextBox();
             this.showRichTextBox = new System.Windows.Forms.RichTextBox();
             this.showButton = new System.Windows.Forms.Button();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // addButton
@@ -46,7 +47,7 @@
             // 
             // inutTextBox
             // 
-            this.inutTextBox.Location = new System.Drawing.Point(22, 48);
+            this.inutTextBox.Location = new System.Drawing.Point(22, 26);
             this.inutTextBox.Name = "inutTextBox";
             this.inutTextBox.Size = new System.Drawing.Size(127, 20);
             this.inutTextBox.TabIndex = 1;
@@ -69,11 +70,19 @@
             this.showButton.UseVisualStyleBackColor = true;
             this.showButton.Click += new System.EventHandler(this.showButton_Click);
             // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(22, 59);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(127, 20);
+            this.nameTextBox.TabIndex = 4;
+            // 
             // LIstForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.showButton);
             this.Controls.Add(this.showRichTextBox);
             this.Controls.Add(this.inutTextBox);
@@ -91,5 +100,6 @@
         private System.Windows.Forms.TextBox inutTextBox;
         private System.Windows.Forms.RichTextBox showRichTextBox;
         private System.Windows.Forms.Button showButton;
+        private System.Windows.Forms.TextBox nameTextBox;
     }
 }
