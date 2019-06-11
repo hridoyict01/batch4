@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FirstExam.Properties
+namespace SeventhClass.Properties
 {
 
 
