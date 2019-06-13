@@ -1,3 +1,6 @@
+create database StudentDBHridoy
+
+
 CREATE TABLE Students (
 ID INT PRIMARY KEY IDENTITY,
 Roll INT,
