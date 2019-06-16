@@ -15,6 +15,7 @@ namespace DepartmentProject
     {
         class Department
         {
+            public int  ID { get; set; }
             public string Name { get; set; }
             public string Code { get; set; }
         }
@@ -98,6 +99,56 @@ namespace DepartmentProject
                 showGridView.DataSource = dataTable;
             }
 
+            con.Close();
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            int Id = Convert.ToInt16(idTextBox.Text);
+            string connectionString = @"Server=PC-301-30\SQLEXPRESS; Database =StudentDBHridoy; Integrated Security = true";
+            SqlConnection con = new SqlConnection(connectionString);
+            //
+            string commandString = @"update Departments set Name = '4444' where ID = "+Id;
+            SqlCommand sqlCommand = new SqlCommand(commandString, con);
+
+            con.Open();
+            int isExecuted = 0;
+            isExecuted = sqlCommand.ExecuteNonQuery();
+            if (isExecuted > 0)
+            {
+                messageLabel.Text = "Update Successful";
+
+                messageLabel.BackColor = Color.Green;
+            }
+            else
+            {
+                MessageBox.Show("Failed bro, better luck next time");
+            }
+            con.Close();
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            int Id = Convert.ToInt16(idTextBox.Text);
+            string connectionString = @"Server=PC-301-30\SQLEXPRESS; Database =StudentDBHridoy; Integrated Security = true";
+            SqlConnection con = new SqlConnection(connectionString);
+            //
+            string commandString = @"DELETE from Departments where ID = " + Id;
+            SqlCommand sqlCommand = new SqlCommand(commandString, con);
+
+            con.Open();
+            int isExecuted = 0;
+            isExecuted = sqlCommand.ExecuteNonQuery();
+            if (isExecuted > 0)
+            {
+                messageLabel.Text = "Delete Successful";
+
+                messageLabel.BackColor = Color.Red;
+            }
+            else
+            {
+                MessageBox.Show("Failed bro, better luck next time");
+            }
             con.Close();
         }
     }
