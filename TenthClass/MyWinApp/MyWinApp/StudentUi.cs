@@ -42,7 +42,7 @@ namespace MyWinApp
             DataTable dataTable = new DataTable();
 
             dataAdapter.Fill(dataTable);
-
+            districtComboBox.Items.Insert(0,"Select District");
             if (dataTable.Rows.Count > 0)
             {
                 districtComboBox.DataSource = dataTable;
@@ -124,6 +124,7 @@ namespace MyWinApp
             ageTextBox.Text = (displayDataGridView.Rows[e.RowIndex].Cells[4].Value.ToString());
             //districtComboBox.SelectedValue = Convert.ToInt16(displayDataGridView.Rows[e.RowIndex].Cells[6].Value.ToString());
             districtComboBox.Text = (displayDataGridView.Rows[e.RowIndex].Cells[6].Value.ToString());
+            SaveButton.Text = "Update";
         }
     }
 }
