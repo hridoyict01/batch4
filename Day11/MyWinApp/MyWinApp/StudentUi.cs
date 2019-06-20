@@ -16,19 +16,12 @@ namespace MyWinApp
 {
     public partial class StudentUi : Form
     {
-        //        string connectionString = @"Server=BITM-TRAINER-30\SQLEXPRESS; Database=StudentDB; Integrated Security=True";
-        //        SqlConnection sqlConnection;
-        //
-        //        private string commandString;
-        //        private SqlCommand sqlCommand;
         StudentManager _studentManager = new StudentManager();
         private Student student;
         private int ID = 0;
         public StudentUi()
         {
             InitializeComponent();
-//            sqlConnection = new SqlConnection(connectionString);
-
             student = new Student();
         }
 
@@ -38,25 +31,6 @@ namespace MyWinApp
             displayDataGridView.DataSource = _studentManager.ShowStudents();
             districtComboBox.Text = "Select a Districe";
         }
-
-//        private void LoadDistrict()
-//        {
-//            
-//            commandString = @"SELECT * FROM Districts";
-//            sqlCommand = new SqlCommand(commandString, sqlConnection);
-//
-//            sqlConnection.Open();
-//
-//            SqlDataAdapter dataAdapter =  new SqlDataAdapter(sqlCommand);
-//            DataTable dataTable = new DataTable();
-//            dataAdapter.Fill(dataTable);
-//
-//            if (dataTable.Rows.Count > 0)
-//                districtComboBox.DataSource = dataTable;
-//
-//
-//            sqlConnection.Close();
-//        }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
@@ -103,29 +77,6 @@ namespace MyWinApp
             displayDataGridView.DataSource = _studentManager.ShowStudents();
         }
 
-//        private void InsertStudent(Student student)
-//        {
-//            commandString = @"INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('" + student.RollNo + "', '" + student.Name + "', " + student.Age + ", '" + student.Address + "'," + student.DistrictID + ")";
-//            sqlCommand = new SqlCommand(commandString, sqlConnection);
-//
-//            sqlConnection.Open();
-//            int isExecuted;
-//
-//            isExecuted = sqlCommand.ExecuteNonQuery();
-//
-//            if (isExecuted>0)
-//            {
-//                MessageBox.Show("Saved");
-//            }else
-//            {
-//                MessageBox.Show("Not Saved");
-//            }
-//
-//            sqlConnection.Close();
-//
-//
-//        }
-
         private void ShowButton_Click(object sender, EventArgs e)
         {
             displayDataGridView.DataSource = _studentManager.ShowStudents();
@@ -169,9 +120,6 @@ namespace MyWinApp
             nameTextBox.Text = (displayDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString());
             ageTextBox.Text = (displayDataGridView.Rows[e.RowIndex].Cells[4].Value.ToString());
             addressTextBox.Text = (displayDataGridView.Rows[e.RowIndex].Cells[5].Value.ToString());
-            //districtComboBox.SelectedValue = Convert.ToInt16(displayDataGridView.Rows[e.RowIndex].Cells[6].Value.ToString());
-           // districtComboBox.DataSource = _studentManager.LoadDistrict();
-            //SaveButton.Text = "Update";
         }
 
         private void EditButton_Click(object sender, EventArgs e)
@@ -195,25 +143,5 @@ namespace MyWinApp
             addressTextBox.Text = (displayDataGridView.Rows[e.RowIndex].Cells[5].Value.ToString());
             SaveButton.Text = "Update";
         }
-
-        // private void ShowStudents()
-        //        {
-        //            commandString = @"SELECT * FROM StudentsView";
-        //            sqlCommand = new SqlCommand(commandString, sqlConnection);
-        //
-        //            sqlConnection.Open();
-        //
-        //            SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlCommand);
-        //            DataTable dataTable = new DataTable();
-        //            dataAdapter.Fill(dataTable);
-        //
-        //            if (dataTable.Rows.Count > 0)
-        //                displayDataGridView.DataSource = dataTable;
-        //
-        //
-        //            sqlConnection.Close();
-        //        }
-
-
     }
 }

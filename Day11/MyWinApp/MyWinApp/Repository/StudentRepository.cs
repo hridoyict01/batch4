@@ -17,9 +17,6 @@ namespace MyWinApp.Repository
         SqlConnection con;
         private string commandString;
         private SqlCommand sqlCommand;
-
-        
-
         //All database related methods will be here
         public DataTable LoadDistrict()
         {
