@@ -8,24 +8,22 @@ namespace RefrigeratorAppPractice3
 {
     class RefrigeratorCapacity
     {
-        public double MaxWeight { get; set; }
+        private double maxWeight;
 
         public double CurrentWeight { get; set; }
 
+        public RefrigeratorCapacity(double maxWeight)
+        {
+            this.maxWeight = maxWeight;
+        }
+
         public double RemainingWeight(double weight)
         {
-            double result;
+            double reminingWeight;
             CurrentWeight = CurrentWeight + weight;
-            if (MaxWeight < CurrentWeight)
-            {
-                result = -1;
-            }
-            else
-            {
-                result =  MaxWeight - CurrentWeight;
-            }
+            reminingWeight = maxWeight - CurrentWeight;
 
-            return result;
+            return reminingWeight;
         }
 
 

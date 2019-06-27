@@ -12,7 +12,7 @@ namespace RefrigeratorAppPractice3
 {
     public partial class RefrigeratorUi : Form
     {
-         RefrigeratorCapacity refrigerator = new RefrigeratorCapacity();
+        private RefrigeratorCapacity refrigerator;
         public RefrigeratorUi()
         {
             InitializeComponent();
@@ -20,7 +20,8 @@ namespace RefrigeratorAppPractice3
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            refrigerator.MaxWeight = Convert.ToDouble(maxWeightTakeTextBox.Text);
+            double maxWeight = Convert.ToDouble(maxWeightTakeTextBox.Text);
+            refrigerator = new RefrigeratorCapacity(maxWeight);
             maxWeightTakeTextBox.Clear();
         }
 
@@ -29,14 +30,14 @@ namespace RefrigeratorAppPractice3
             int numberOfItems = Convert.ToInt16(itemTextBox.Text);
             double weight = Convert.ToDouble(weightTextBox.Text);
             double totalWeight = numberOfItems * weight;
-            double result = refrigerator.RemainingWeight(totalWeight);
-            if (result < 0)
+            double reminingWeight = refrigerator.RemainingWeight(totalWeight);
+            if (reminingWeight < 0)
             {
                 MessageBox.Show("Weight overflow");
             }
             else
             {
-                remainingWeightTextBox.Text = result.ToString();
+                remainingWeightTextBox.Text = reminingWeight.ToString();
                 currentWeightTextBox.Text = refrigerator.CurrentWeight.ToString();
             }
             
