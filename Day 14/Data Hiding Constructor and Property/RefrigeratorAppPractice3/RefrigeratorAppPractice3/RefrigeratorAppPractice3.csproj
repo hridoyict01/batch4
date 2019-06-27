@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RefrigeratorCapacity.cs" />
     <Compile Include="RefrigeratorUi.cs">
       <SubType>Form</SubType>
     </Compile>

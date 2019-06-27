@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Vehicle.cs" />
     <Compile Include="VehicleUi.cs">
       <SubType>Form</SubType>
     </Compile>

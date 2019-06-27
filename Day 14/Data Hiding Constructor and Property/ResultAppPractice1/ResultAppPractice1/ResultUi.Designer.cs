@@ -159,6 +159,7 @@
             this.ShowButton.TabIndex = 5;
             this.ShowButton.Text = "Show";
             this.ShowButton.UseVisualStyleBackColor = true;
+            this.ShowButton.Click += new System.EventHandler(this.ShowButton_Click);
             // 
             // ResultUi
             // 

@@ -54,6 +54,7 @@
             this.ShowButton.TabIndex = 19;
             this.ShowButton.Text = "Show";
             this.ShowButton.UseVisualStyleBackColor = true;
+            this.ShowButton.Click += new System.EventHandler(this.ShowButton_Click);
             // 
             // maxSpeedTextBox
             // 
@@ -168,6 +169,7 @@
             this.EnterButton.TabIndex = 19;
             this.EnterButton.Text = "Enter";
             this.EnterButton.UseVisualStyleBackColor = true;
+            this.EnterButton.Click += new System.EventHandler(this.EnterButton_Click);
             // 
             // CreateButton
             // 
@@ -177,6 +179,7 @@
             this.CreateButton.TabIndex = 19;
             this.CreateButton.Text = "Create";
             this.CreateButton.UseVisualStyleBackColor = true;
+            this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
             // 
             // VehicleUi
             // 

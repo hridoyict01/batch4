@@ -12,6 +12,7 @@ namespace PersonInformationAppWalkthrough2
 {
     public partial class PersonInformationUi : Form
     {
+        private Person person;
         public PersonInformationUi()
         {
             InitializeComponent();
@@ -19,14 +20,14 @@ namespace PersonInformationAppWalkthrough2
 
         private void ShowButton_Click(object sender, EventArgs e)
         {
-            Person personobbj = new Person();
-            personobbj.FirstName = firstNameTextBox.Text;
-            personobbj.MiddleName = middleNameTextBox.Text;
-            personobbj.LastName = lastNameTextBox.Text;
-
-            string fullName = personobbj.GetFullName();
-
-            fullNameTextBox.Text = fullName;
+            person = new Person();
+            //
+            person.FirstName = firstNameTextBox.Text;
+            person.MiddleName = middleNameTextBox.Text;
+            person.LastName = lastNameTextBox.Text;
+            //
+            reverseNameTextBox.Text = person.FirstName;
+            fullNameTextBox.Text = person.FullName;
         }
     }
 }
