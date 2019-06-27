@@ -29,7 +29,7 @@ namespace MyWinApp
         {
             districtComboBox.DataSource = _studentManager.LoadDistrict();
             displayDataGridView.DataSource = _studentManager.ShowStudents();
-            districtComboBox.Text = "Select a Districe";
+            districtComboBox.Text = "Select a DistricT";
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -134,7 +134,7 @@ namespace MyWinApp
             displayDataGridView.DataSource = _studentManager.SearchStudent(name);
         }
 
-        private void displayDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void displayDataGridView_CellConten   tDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             ID = Convert.ToInt16(displayDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
             rollNoTextBox.Text = (displayDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString());

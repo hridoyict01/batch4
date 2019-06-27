@@ -63,6 +63,7 @@ namespace MyWinApp.Repository
             con.Open();
             int isExecuted;
             isExecuted = sqlCommand.ExecuteNonQuery();
+			con.Close();
             return isExecuted;
         }
 
